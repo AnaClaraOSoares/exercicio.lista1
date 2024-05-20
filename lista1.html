@@ -1,0 +1,63 @@
+<!DOCTYPE html> 
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body{
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: white;
+        }
+        .container{
+            width: 350px;
+            height: 450px;
+            padding: 20px;
+            background-color:rgb(206, 202, 202);
+        }
+
+    </style>
+    
+</head>
+<body>
+    <div class="container">
+
+        <header>
+            <div class="center">
+                <h1>Imobiliária Imobilis</h1>
+                <h2>Seja bem-vindo</h2>
+            </div>
+        </header>
+            <p>Informe as dimensões do seu terreno para saber a área total.</p>
+            <form>
+                <label for="largura">Largura</label><br><br>
+                <input type="text" id="largura" name="largura"><br><br>
+            
+                <label for="Comprimento">Comprimento</label><br><br>
+                <input type="text" id="comprimento" name="comprimento"><br><br>
+                <button type="button" onclick="Calcular()">Calcular</button> 
+                <p>Area Total:</p> 
+                <p id="areatotal">...</p>
+            
+               
+            
+            </form>
+    </div>
+
+    <script>
+        function Calcular(){
+            let largura = document.getElementById("largura").value;
+            let comprimento = document.getElementById("comprimento").value;
+            let total = largura * comprimento;
+            document.getElementById("areatotal").innerHTML = ("o comprimento capturado é: ",total); 
+            document.getElementById("areatotal").innerHTML = ("a largura capturada é: ",total);
+            console.log("a area total é: ", total);
+
+        }
+       
+    </script>
+
+</body>
+</html>
